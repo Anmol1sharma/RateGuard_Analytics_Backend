@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 
 // CORS Configuration
 app.use(cors({
-  origin: "https://ai-insurance-analyser-frontend.vercel.app/", // frontend origin
+  origin: "https://ai-insurance-analyser-frontend.vercel.app", // frontend origin
   credentials: true,              // allow cookies & auth headers
 }));
 
