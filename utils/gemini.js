@@ -6,7 +6,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 export async function generateGeminiResponse(policyText) {
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const prompt = `
 You are an expert insurance policy summarizer. Please summarize the following insurance policy in **exactly 5 concise bullet points**, covering the most important features, benefits, exclusions, and terms of the policy.
@@ -37,7 +37,7 @@ ${policyText}
 
 export async function getChatbotReply(userMessage) {
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const prompt = `
 You are an expert in Indian insurance policies. Answer user questions in a simple, clear, and helpful way. Do not provide legal or financial advice, just general information.
